@@ -60,7 +60,7 @@
           "hatch_smoothing_level": 0,
           "hatch_smoothing_value": 0.1,
           "hatch_thickness": 1.0,
-          "min_clearance": 0.2,
+          "min_clearance": 0.0,
           "min_island_area": 10.0,
           "min_thickness": 0.2,
           "pad_connection": 2,
@@ -162,7 +162,7 @@
         "min_track_width": 0.2,
         "min_via_annular_width": 0.1,
         "min_via_diameter": 0.5,
-        "solder_mask_to_copper_clearance": 0.0,
+        "solder_mask_to_copper_clearance": 0.005,
         "use_height_for_length_calcs": true
       },
       "teardrop_options": [
@@ -661,7 +661,7 @@
         "uuid": "378d3a60-d516-451f-b521-6877ad9b233c"
       }
     ],
-    "used_designators": "TP5,C2-3,C6,#PWR10,#PWR12,#PWR25,#PWR29",
+    "used_designators": "",
     "variants": []
   },
   "sheets": [
