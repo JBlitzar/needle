@@ -46,10 +46,13 @@ After the first flash, the firmware jumps to the bootloader when it receives `BO
 make autoflash
 ```
 
-With `USB_SERIAL_DEBUG 0` (deep sleep), the firmware only listens for 3 s after reset or after USB power is plugged in (charger PG on PA10). Run `make autoflash`, then plug in (or replug) the cable. If more than one `/dev/cu.usbmodem*` exists, pick the port: `make autoflash USB_SERIAL=/dev/cu.usbmodemXXXX`.
+See comment in [`needle.c`](firmware/needle/needle.c) regarding `USB_SERIAL_DEBUG`
 
-If the chip ever stops responding to USB flashing, recover with:
+If the chip ever stops responding to USB flashing:
+
+ - hold BOOT
+ - plug in USB
 
 ```bash
-make 5xx_unbrick    # hold BOOT, plug in USB, then run this
+make 5xx_unbrick
 ```
