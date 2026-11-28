@@ -16,6 +16,15 @@
 
 #define XT32M_LOAD_20PF 0b111
 
+#define USB_SERIAL_DEBUG 1 // 1: usb serial, no deep sleep. 0: deep sleep, no serial.
+#define BOOT_WINDOW_MS 3'000
+#define BOOT_COMMAND "BOOT"
+
+#define PG_PIN 10
+#define RB_SLP_GPIO_EDGE_MODE 0x04 // missing from ch5xxhw.h
+
+static volatile uint8_t usb_plugged;
+
 // The advertisement to be sent. The MAC address should be in the first 6 bytes in reversed byte order,
 // after that any BLE flag can be used.
 const uint8_t adv_data[] = {
@@ -28,11 +37,23 @@ ISLER_BUF_ATTR uint8_t adv[256];
 
 uint8_t adv_channels[] = {37,38,39};
 
-void HandleUSBInput(int numbytes, uint8_t *data) {}
+void HandleUSBInput(int numbytes, uint8_t *data) {
+	if(numbytes >= sizeof(BOOT_COMMAND) - 1 && memcmp(data, BOOT_COMMAND, sizeof(BOOT_COMMAND) - 1) == 0) {
+		USBFSReset();
+		__disable_irq(); // match reset state so no stale IRQ vectors into flash while the bootloader erases it
+		jump_isprom();
+	}
+}
 
 __INTERRUPT
 void RTC_IRQHandler(void) {
 	R8_RTC_FLAG_CTRL = RB_RTC_TRIG_CLR;
+}
+
+__INTERRUPT
+void GPIOA_IRQHandler(void) {
+	R16_PA_INT_IF = 1 << PG_PIN;
+	usb_plugged = 1;
 }
 
 void allPinPullUp(void)
@@ -51,6 +72,28 @@ void idle_ms(int ms){
     LowPowerIdle( MS_TO_RTC(ms) );
 }
 
+void usbBootWindow(void) {
+	R32_PA_PU &= ~0b11;
+	USBFSSetup();
+	for(int ms = 0; ms < BOOT_WINDOW_MS; ms += 10) {
+		poll_input();
+		Delay_Ms(10);
+	}
+	USBFSReset();
+	allPinPullUp();
+}
+
+
+void pgWakeInit(void) {
+	R16_PA_INT_MODE |= 1 << PG_PIN;
+	R16_PA_INT_IF = 1 << PG_PIN;
+	R16_PA_INT_EN |= 1 << PG_PIN;
+	SYS_SAFE_ACCESS(
+		R8_SLP_WAKE_CTRL |= RB_SLP_GPIO_WAKE | RB_GPIO_WAKE_MODE | RB_SLP_GPIO_EDGE_MODE | RB_WAKE_EV_MODE;
+	);
+	NVIC_EnableIRQ(GPIOA_IRQn);
+}
+
 int main() {
 	SystemInit();
 	SYS_SAFE_ACCESS(
@@ -66,8 +109,13 @@ int main() {
 
 	funGpioInitAll();
 
+#if USB_SERIAL_DEBUG
 	R32_PA_PU &= ~0b11;
 	USBFSSetup();
+#else
+	pgWakeInit();
+	usbBootWindow();
+#endif
 
 	memcpy(adv, adv_data, sizeof(adv_data));
 
@@ -83,9 +131,16 @@ int main() {
 			iSLERTX(ACCESS_ADDRESS, adv, sizeof(adv_data), adv_channels[c], PHY_1M);
 		}
 
-		// !!! usb printf debugging requires busywaiting sleep.
-		// LowPower( MS_TO_RTC(SLEEPTIME_MS), (RB_PWR_RAM2K | RB_PWR_RAMX | RB_PWR_EXTEND) );
+#if USB_SERIAL_DEBUG
 		Delay_Ms(SLEEPTIME_MS);
+		poll_input();
+#else
+		LowPower( MS_TO_RTC(SLEEPTIME_MS), (RB_PWR_RAM2K | RB_PWR_RAMX | RB_PWR_EXTEND) );
+		if(usb_plugged) {
+			usbBootWindow();
+			usb_plugged = 0;
+		}
+#endif
 
 		iSLERInit(txPower); // RF wakes up in an odd state, we need to reinit after sleep
 		DCDCEnable(); // DCDC gets disabled during sleep

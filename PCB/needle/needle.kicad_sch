@@ -4332,6 +4332,16 @@
 	)
 	(wire
 		(pts
+			(xy 207.01 39.37) (xy 210.82 39.37)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7e729fdc-433b-4ea2-b7e6-1ae098c0594d")
+	)
+	(wire
+		(pts
 			(xy 38.1 125.73) (xy 45.72 125.73)
 		)
 		(stroke
@@ -4690,6 +4700,16 @@
 		)
 		(uuid "472ff2d3-2aeb-48f2-b359-d769b1ddbf63")
 	)
+	(label "PA10"
+		(at 210.82 39.37 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "4c0b4f96-3119-4809-98dd-3a68dd14b68e")
+	)
 	(label "D+"
 		(at 54.61 148.59 180)
 		(effects
@@ -4759,6 +4779,16 @@
 			(justify left bottom)
 		)
 		(uuid "817cb0d5-e6d4-4ae8-b6a7-008c82f2bf16")
+	)
+	(label "PG"
+		(at 207.01 39.37 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "823d8530-c8e9-4705-b46e-3a43bbd01c58")
 	)
 	(label "PA6"
 		(at 83.82 118.11 180)

@@ -29,7 +29,7 @@ git submodule update --init firmware/ch32fun
 ## Build and flash
 
 ```bash
-cd firmware/src
+cd firmware/needle
 make build
 ```
 
@@ -37,6 +37,16 @@ make build
 1. Hold the BOOT button (solder jumper).
 2. Plug in USB (or press RST while holding BOOT).
 3. Run `make flash` in another terminal, then release BOOT.
+
+### Reflash without BOOT
+
+After the first flash, the firmware jumps to the bootloader when it receives `BOOT` over USB serial:
+
+```bash
+make autoflash
+```
+
+With `USB_SERIAL_DEBUG 0` (deep sleep), the firmware only listens for 3 s after reset or after USB power is plugged in (charger PG on PA10). Run `make autoflash`, then plug in (or replug) the cable. If more than one `/dev/cu.usbmodem*` exists, pick the port: `make autoflash USB_SERIAL=/dev/cu.usbmodemXXXX`.
 
 If the chip ever stops responding to USB flashing, recover with:
 
