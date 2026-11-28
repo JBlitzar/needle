@@ -4929,6 +4929,7 @@
 				(pins "1")
 			)
 		)
+		(attr exclude_from_pos_files exclude_from_bom)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_circle
 			(center 0 0)
@@ -5044,7 +5045,7 @@
 			)
 		)
 		(zone_connect 1)
-		(attr exclude_from_bom allow_soldermask_bridges)
+		(attr exclude_from_pos_files exclude_from_bom allow_soldermask_bridges)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_rect
 			(start -0.15 0.75)
@@ -5492,7 +5493,7 @@
 			)
 		)
 		(zone_connect 1)
-		(attr exclude_from_bom allow_soldermask_bridges)
+		(attr exclude_from_pos_files exclude_from_bom allow_soldermask_bridges)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_rect
 			(start -0.15 0.75)
@@ -5771,6 +5772,7 @@
 				(pins "1")
 			)
 		)
+		(attr exclude_from_pos_files exclude_from_bom)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_circle
 			(center 0 0)
@@ -5885,6 +5887,7 @@
 				(pins "1")
 			)
 		)
+		(attr exclude_from_pos_files exclude_from_bom)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_circle
 			(center 0 0)
@@ -6815,6 +6818,15 @@
 		(free yes)
 		(net "GND")
 		(uuid "6d6843af-59f2-41ad-9db5-ca9769eb8446")
+	)
+	(via
+		(at 63.78 30.28)
+		(size 0.45)
+		(drill 0.2)
+		(layers "F.Cu" "B.Cu")
+		(free yes)
+		(net "GND")
+		(uuid "75b95438-83b6-4df4-b1e0-cec96029f9e9")
 	)
 	(via
 		(at 63.64 29.36)
