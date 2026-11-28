@@ -3804,7 +3804,7 @@
 	)
 	(rectangle
 		(start 104.14 142.494)
-		(end 153.416 152.654)
+		(end 123.444 147.32)
 		(stroke
 			(width 0)
 			(type default)
@@ -3898,16 +3898,6 @@
 		)
 		(uuid "bb03b5c8-94c0-4068-8005-44c5e9ca2724")
 	)
-	(text "Check decoupling on 3v3 + vbus"
-		(exclude_from_sim no)
-		(at 121.158 147.828 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-		)
-		(uuid "e325b7f4-301b-47b4-8112-48b4eddf9282")
-	)
 	(junction
 		(at 57.15 105.41)
 		(diameter 0)
@@ -3927,7 +3917,7 @@
 		(uuid "24b06c03-63d6-442d-81fa-0e2f960c2462")
 	)
 	(junction
-		(at 144.78 50.8)
+		(at 160.02 50.8)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "3ab1d448-d25b-48da-bd5b-11a6aa1ad3e3")
@@ -3963,7 +3953,7 @@
 		(uuid "c59451de-0d8a-40d4-9987-f8bfd6ed6353")
 	)
 	(junction
-		(at 148.59 50.8)
+		(at 163.83 50.8)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "c5baa896-5268-447b-b8dc-aa3cec7fd85f")
@@ -4082,7 +4072,7 @@
 	)
 	(wire
 		(pts
-			(xy 171.45 38.1) (xy 179.07 38.1)
+			(xy 186.69 38.1) (xy 194.31 38.1)
 		)
 		(stroke
 			(width 0)
@@ -4202,7 +4192,7 @@
 	)
 	(wire
 		(pts
-			(xy 135.89 50.8) (xy 144.78 50.8)
+			(xy 151.13 50.8) (xy 160.02 50.8)
 		)
 		(stroke
 			(width 0)
@@ -4232,7 +4222,7 @@
 	)
 	(wire
 		(pts
-			(xy 148.59 50.8) (xy 179.07 50.8)
+			(xy 163.83 50.8) (xy 194.31 50.8)
 		)
 		(stroke
 			(width 0)
@@ -4312,7 +4302,7 @@
 	)
 	(wire
 		(pts
-			(xy 144.78 50.8) (xy 148.59 50.8)
+			(xy 160.02 50.8) (xy 163.83 50.8)
 		)
 		(stroke
 			(width 0)
@@ -4372,7 +4362,7 @@
 	)
 	(wire
 		(pts
-			(xy 148.59 50.8) (xy 148.59 43.18)
+			(xy 163.83 50.8) (xy 163.83 43.18)
 		)
 		(stroke
 			(width 0)
@@ -4412,7 +4402,7 @@
 	)
 	(wire
 		(pts
-			(xy 135.89 40.64) (xy 135.89 38.1)
+			(xy 151.13 40.64) (xy 151.13 38.1)
 		)
 		(stroke
 			(width 0)
@@ -4482,7 +4472,7 @@
 	)
 	(wire
 		(pts
-			(xy 171.45 33.02) (xy 181.61 33.02)
+			(xy 186.69 33.02) (xy 196.85 33.02)
 		)
 		(stroke
 			(width 0)
@@ -4522,7 +4512,7 @@
 	)
 	(wire
 		(pts
-			(xy 144.78 40.64) (xy 148.59 40.64)
+			(xy 160.02 40.64) (xy 163.83 40.64)
 		)
 		(stroke
 			(width 0)
@@ -4572,7 +4562,7 @@
 	)
 	(wire
 		(pts
-			(xy 179.07 38.1) (xy 179.07 40.64)
+			(xy 194.31 38.1) (xy 194.31 40.64)
 		)
 		(stroke
 			(width 0)
@@ -4602,7 +4592,7 @@
 	)
 	(wire
 		(pts
-			(xy 135.89 38.1) (xy 148.59 38.1)
+			(xy 151.13 38.1) (xy 163.83 38.1)
 		)
 		(stroke
 			(width 0)
@@ -4631,7 +4621,7 @@
 		(uuid "ffb6be24-4c3f-49e5-840c-9ee49e2fb200")
 	)
 	(label "PG"
-		(at 171.45 40.64 0)
+		(at 186.69 40.64 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4781,7 +4771,7 @@
 		(uuid "98d84e20-de72-4bfe-a930-1f87ad0503b6")
 	)
 	(label "STAT"
-		(at 171.45 43.18 0)
+		(at 186.69 43.18 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4856,7 +4846,7 @@
 	)
 	(global_label "VBUS"
 		(shape input)
-		(at 77.47 48.26 180)
+		(at 139.7 35.56 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -4866,7 +4856,7 @@
 		)
 		(uuid "7f99cdb6-b3d1-41fb-bdcf-17bfecb06885")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 69.5862 48.26 0)
+			(at 131.8162 35.56 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5024,7 +5014,7 @@
 	)
 	(global_label "BAT+"
 		(shape input)
-		(at 171.45 35.56 0)
+		(at 186.69 35.56 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -5034,7 +5024,7 @@
 		)
 		(uuid "d30a042e-6482-41a8-ab18-b1942a50d0f6")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 179.3338 35.56 0)
+			(at 194.5738 35.56 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5048,7 +5038,7 @@
 	)
 	(global_label "VBUS"
 		(shape input)
-		(at 148.59 35.56 180)
+		(at 163.83 35.56 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -5058,7 +5048,7 @@
 		)
 		(uuid "f2d3faa8-9290-4fe3-b87f-575f254107cc")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 140.7062 35.56 0)
+			(at 155.9462 35.56 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5120,7 +5110,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 181.61 33.02 0)
+		(at 196.85 33.02 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -5131,7 +5121,7 @@
 		(fields_autoplaced yes)
 		(uuid "0c3c35ce-bf11-47c7-99f0-44038c732987")
 		(property "Reference" "#PWR024"
-			(at 181.61 39.37 0)
+			(at 196.85 39.37 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5142,7 +5132,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 181.61 38.1 0)
+			(at 196.85 38.1 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -5152,7 +5142,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 181.61 33.02 0)
+			(at 196.85 33.02 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5163,7 +5153,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 181.61 33.02 0)
+			(at 196.85 33.02 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5174,7 +5164,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 181.61 33.02 0)
+			(at 196.85 33.02 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5198,7 +5188,7 @@
 	)
 	(symbol
 		(lib_id "Device:C")
-		(at 77.47 52.07 0)
+		(at 139.7 39.37 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -5209,7 +5199,7 @@
 		(fields_autoplaced yes)
 		(uuid "101f6594-ef48-4d84-b25a-e2c5a8056d82")
 		(property "Reference" "C6"
-			(at 81.28 50.7999 0)
+			(at 143.51 38.0999 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -5220,7 +5210,7 @@
 			)
 		)
 		(property "Value" "1uF"
-			(at 81.28 53.3399 0)
+			(at 143.51 40.6399 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -5231,7 +5221,7 @@
 			)
 		)
 		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
-			(at 78.4352 55.88 0)
+			(at 140.6652 43.18 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5242,7 +5232,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 77.47 52.07 0)
+			(at 139.7 39.37 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5253,7 +5243,7 @@
 			)
 		)
 		(property "Description" "1uF X7R ±20% 50V 0603 Ceramic Capacitors RoHS"
-			(at 77.47 52.07 0)
+			(at 139.7 39.37 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5264,7 +5254,7 @@
 			)
 		)
 		(property "LCSC Part #" "C54824972"
-			(at 77.47 52.07 0)
+			(at 139.7 39.37 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5642,7 +5632,7 @@
 	)
 	(symbol
 		(lib_id "lcsc:FRC0603F3002TS")
-		(at 135.89 45.72 90)
+		(at 151.13 45.72 90)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -5652,7 +5642,7 @@
 		(dnp no)
 		(uuid "29b88db9-6d17-4168-a742-87bb991151c6")
 		(property "Reference" "R6"
-			(at 131.064 44.45 90)
+			(at 146.304 44.45 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -5663,7 +5653,7 @@
 			)
 		)
 		(property "Value" "30k"
-			(at 131.064 46.99 90)
+			(at 146.304 46.99 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -5674,7 +5664,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
-			(at 143.51 45.72 0)
+			(at 158.75 45.72 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5685,7 +5675,7 @@
 			)
 		)
 		(property "Datasheet" "https://www.lcsc.com/datasheet/C2907025.pdf"
-			(at 146.05 45.72 0)
+			(at 161.29 45.72 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5696,28 +5686,6 @@
 			)
 		)
 		(property "Description" ""
-			(at 135.89 45.72 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Manufacturer" "FOJAN(富捷)"
-			(at 148.59 45.72 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "MPN" "FRC0603F3002TS"
 			(at 151.13 45.72 0)
 			(hide yes)
 			(show_name no)
@@ -5728,8 +5696,30 @@
 				)
 			)
 		)
+		(property "Manufacturer" "FOJAN(富捷)"
+			(at 163.83 45.72 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "FRC0603F3002TS"
+			(at 166.37 45.72 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(property "LCSC Part" "C2907025"
-			(at 153.67 45.72 0)
+			(at 168.91 45.72 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6218,7 +6208,7 @@
 	)
 	(symbol
 		(lib_id "lcsc:NCP18XH103F03RB")
-		(at 144.78 45.72 270)
+		(at 160.02 45.72 270)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -6228,7 +6218,7 @@
 		(dnp no)
 		(uuid "5b17bc32-7406-413d-b5bb-2bba2c4f8631")
 		(property "Reference" "R5"
-			(at 139.446 44.196 90)
+			(at 154.686 44.196 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -6239,7 +6229,7 @@
 			)
 		)
 		(property "Value" "10k"
-			(at 139.446 46.736 90)
+			(at 154.686 46.736 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -6250,7 +6240,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
-			(at 137.16 45.72 0)
+			(at 152.4 45.72 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6261,7 +6251,7 @@
 			)
 		)
 		(property "Datasheet" "https://lcsc.com/product-detail/NTC-Thermistors_muRata_NCP18XH103F03RB_10KR-1002-1_C13564.html"
-			(at 134.62 45.72 0)
+			(at 149.86 45.72 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6272,7 +6262,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 144.78 45.72 0)
+			(at 160.02 45.72 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6283,7 +6273,7 @@
 			)
 		)
 		(property "Manufacturer" "muRata(村田)"
-			(at 132.08 45.72 0)
+			(at 147.32 45.72 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6294,7 +6284,7 @@
 			)
 		)
 		(property "MPN" "NCP18XH103F03RB"
-			(at 129.54 45.72 0)
+			(at 144.78 45.72 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6305,7 +6295,7 @@
 			)
 		)
 		(property "LCSC Part" "C13564"
-			(at 127 45.72 0)
+			(at 142.24 45.72 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6817,7 +6807,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 148.59 50.8 0)
+		(at 163.83 50.8 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -6828,7 +6818,7 @@
 		(fields_autoplaced yes)
 		(uuid "77942cc4-8b23-46bc-8a90-a8b619063861")
 		(property "Reference" "#PWR023"
-			(at 148.59 57.15 0)
+			(at 163.83 57.15 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6839,7 +6829,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 148.59 55.88 0)
+			(at 163.83 55.88 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -6849,7 +6839,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 148.59 50.8 0)
+			(at 163.83 50.8 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6860,7 +6850,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 148.59 50.8 0)
+			(at 163.83 50.8 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6871,7 +6861,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 148.59 50.8 0)
+			(at 163.83 50.8 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6972,7 +6962,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 77.47 55.88 0)
+		(at 139.7 43.18 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -6983,7 +6973,7 @@
 		(fields_autoplaced yes)
 		(uuid "7ae95412-2b9f-4df9-9a38-99a22b2229ee")
 		(property "Reference" "#PWR029"
-			(at 77.47 62.23 0)
+			(at 139.7 49.53 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6994,7 +6984,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 77.47 60.96 0)
+			(at 139.7 48.26 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -7004,7 +6994,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 77.47 55.88 0)
+			(at 139.7 43.18 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7015,7 +7005,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 77.47 55.88 0)
+			(at 139.7 43.18 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7026,7 +7016,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 77.47 55.88 0)
+			(at 139.7 43.18 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7140,7 +7130,7 @@
 	)
 	(symbol
 		(lib_id "lcsc:BQ25170DSGR")
-		(at 160.02 38.1 0)
+		(at 175.26 38.1 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -7151,7 +7141,7 @@
 		(fields_autoplaced yes)
 		(uuid "9734da1f-6621-4385-9d31-fb097e7e5c8b")
 		(property "Reference" "U2"
-			(at 160.02 25.4 0)
+			(at 175.26 25.4 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -7161,7 +7151,7 @@
 			)
 		)
 		(property "Value" "BQ25170DSGR"
-			(at 160.02 27.94 0)
+			(at 175.26 27.94 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -7171,7 +7161,7 @@
 			)
 		)
 		(property "Footprint" "easyeda2kicad:WSON-8_L2.0-W2.0-P0.50-TL-EP"
-			(at 160.02 50.8 0)
+			(at 175.26 50.8 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7182,7 +7172,7 @@
 			)
 		)
 		(property "Datasheet" "https://www.lcsc.com/datasheet/C5208201.pdf"
-			(at 160.02 53.34 0)
+			(at 175.26 53.34 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7193,7 +7183,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 160.02 38.1 0)
+			(at 175.26 38.1 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7204,7 +7194,7 @@
 			)
 		)
 		(property "Manufacturer" "TI(德州仪器)"
-			(at 160.02 55.88 0)
+			(at 175.26 55.88 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7215,7 +7205,7 @@
 			)
 		)
 		(property "MPN" "BQ25170DSGR"
-			(at 160.02 58.42 0)
+			(at 175.26 58.42 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7226,7 +7216,7 @@
 			)
 		)
 		(property "LCSC Part" "C5208201"
-			(at 160.02 60.96 0)
+			(at 175.26 60.96 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8325,7 +8315,7 @@
 	)
 	(symbol
 		(lib_id "lcsc:FRC0603F2702TS")
-		(at 179.07 45.72 90)
+		(at 194.31 45.72 90)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -8336,7 +8326,7 @@
 		(fields_autoplaced yes)
 		(uuid "ec56e36e-5d41-4346-9e2b-6ac72579ae25")
 		(property "Reference" "R7"
-			(at 181.61 44.4499 90)
+			(at 196.85 44.4499 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -8347,7 +8337,7 @@
 			)
 		)
 		(property "Value" "27k"
-			(at 181.61 46.9899 90)
+			(at 196.85 46.9899 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -8358,7 +8348,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
-			(at 186.69 45.72 0)
+			(at 201.93 45.72 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8369,7 +8359,7 @@
 			)
 		)
 		(property "Datasheet" "https://www.lcsc.com/datasheet/C2930084.pdf"
-			(at 189.23 45.72 0)
+			(at 204.47 45.72 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8380,28 +8370,6 @@
 			)
 		)
 		(property "Description" ""
-			(at 179.07 45.72 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Manufacturer" "FOJAN(富捷)"
-			(at 191.77 45.72 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "MPN" "FRC0603F2702TS"
 			(at 194.31 45.72 0)
 			(hide yes)
 			(show_name no)
@@ -8412,8 +8380,30 @@
 				)
 			)
 		)
+		(property "Manufacturer" "FOJAN(富捷)"
+			(at 207.01 45.72 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "FRC0603F2702TS"
+			(at 209.55 45.72 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(property "LCSC Part" "C2930084"
-			(at 196.85 45.72 0)
+			(at 212.09 45.72 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
