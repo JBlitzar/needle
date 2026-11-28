@@ -29,7 +29,7 @@ git submodule update --init firmware/ch32fun
 ## Build and flash
 
 ```bash
-cd firmware/blink
+cd firmware/src
 make build
 ```
 
