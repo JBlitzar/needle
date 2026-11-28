@@ -7059,7 +7059,7 @@
 				)
 			)
 		)
-		(property "Value" "2.2uF"
+		(property "Value" "4.7uF"
 			(at 60.96 102.362 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8901,7 +8901,7 @@
 		(exclude_from_sim no)
 		(in_bom no)
 		(on_board yes)
-		(in_pos_files yes)
+		(in_pos_files no)
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "feac40d6-8f32-43e4-9a67-e83c2ab6c09e")

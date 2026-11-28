@@ -12,6 +12,8 @@
 
 [`ch32fun` submodule](firmware/ch32fun) has it's [license included](firmware/ch32fun/LICENSE)
 
-some schematic components from `c57` \([license](https://raw.githubusercontent.com/cyao1234/c57/refs/heads/main/LICENSE)\)
-
 Reference designs from datasheets in [`docs/datasheets`](docs/datasheets)
+
+USB edge connector from here: https://github.com/vasya-zh/PCB-Edge-USB-connector-KiCad-library
+
+some schematic components from `c57` \([license](https://raw.githubusercontent.com/cyao1234/c57/refs/heads/main/LICENSE)\)

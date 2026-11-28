@@ -3,21 +3,18 @@
  * License for original source located at https://github.com/cnlohr/ch32fun/blob/master/LICENSE
  */
 
-/*
- * Minimal demo of iSLER used in a low power BLE beacon
- * It advertises just a "Complete Local Name", on a user defined MAC address.
- * For more info on the lowpower part or the iSLER part please refer
- * to their respective demos.
- */
 
 #include "ch32fun.h"
 #include "ch5xx_lowpower.h"
 #include "iSLER.h"
+#include "fsusb.h"
 #include <stdio.h>
 
 #define ACCESS_ADDRESS 0x8E89BED6 // the "BED6" address for BLE advertisements
 
 #define SLEEPTIME_MS 1'000
+
+#define XT32M_LOAD_20PF 0b111
 
 // The advertisement to be sent. The MAC address should be in the first 6 bytes in reversed byte order,
 // after that any BLE flag can be used.
@@ -30,6 +27,8 @@ const uint8_t adv_data[] = {
 ISLER_BUF_ATTR uint8_t adv[256];
 
 uint8_t adv_channels[] = {37,38,39};
+
+void HandleUSBInput(int numbytes, uint8_t *data) {}
 
 __INTERRUPT
 void RTC_IRQHandler(void) {
@@ -54,6 +53,9 @@ void idle_ms(int ms){
 
 int main() {
 	SystemInit();
+	SYS_SAFE_ACCESS(
+		R8_XT32M_TUNE = (R8_XT32M_TUNE & ~RB_XT32M_C_LOAD) | (XT32M_LOAD_20PF << 4);
+	);
 
 	DCDCEnable(); // Enable the internal DCDC
 	LSIEnable(); // Disable LSE, enable LSI
@@ -63,7 +65,9 @@ int main() {
 	allPinPullUp(); // this reduces sleep from ~70uA to 1uA
 
 	funGpioInitAll();
-	funPinMode( LED, GPIO_CFGLR_OUT_2Mhz_PP );
+
+	R32_PA_PU &= ~0b11;
+	USBFSSetup();
 
 	memcpy(adv, adv_data, sizeof(adv_data));
 
@@ -79,10 +83,14 @@ int main() {
 			iSLERTX(ACCESS_ADDRESS, adv, sizeof(adv_data), adv_channels[c], PHY_1M);
 		}
 
-		LowPower( MS_TO_RTC(SLEEPTIME_MS), (RB_PWR_RAM2K | RB_PWR_RAMX | RB_PWR_EXTEND) );
+		// !!! usb printf debugging requires busywaiting sleep.
+		// LowPower( MS_TO_RTC(SLEEPTIME_MS), (RB_PWR_RAM2K | RB_PWR_RAMX | RB_PWR_EXTEND) );
+		Delay_Ms(SLEEPTIME_MS);
 
 		iSLERInit(txPower); // RF wakes up in an odd state, we need to reinit after sleep
 		DCDCEnable(); // DCDC gets disabled during sleep
 		idle_ms(50);
+		printf("hello, world!\n");
+
 	}
 }
